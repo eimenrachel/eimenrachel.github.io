@@ -3,32 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rachel Eimen</title> <!--TODO: This is the display on the tab -->
+  <title>Rachel Eimen</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- 
   <style>
-    
     body {
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0; /* OPTIONAL: This is the background color (currently light grey) */
-      font-family: 'Century Gothic', sans-serif; /* OPTIONAL: This is the font  */
+      background-color: #f0f0f0;
+      font-family: 'Century Gothic', sans-serif;
       color: #333;
     }
     header {
-      background-color: #2ecc71; /* OPTIONAL: This is the header background color (currently green) */
+      background-color: #2ecc71;
       color: white;
       padding: 20px;
       text-align: center;
     }
-    .linkedin-icon {
+    .social-icon {
       color: white;
       font-size: 28px;
       text-decoration: none;
+      margin-left: 10px;
       transition: color 0.3s;
     }
-    .linkedin-icon:hover {
-      color: #d1f0e0; /* lighter green on hover */
+    .social-icon:hover {
+      color: #d1f0e0;
     }
     nav {
       margin-top: 10px;
@@ -37,7 +36,7 @@
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #2ecc71; /* OPTIONAL: This is the navigation banner text color (currently green) */
+      color: #2ecc71;
       font-weight: bold;
     }
     section {
@@ -49,28 +48,24 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
     h2 {
-      color: #2ecc71; /* OPTIONAL: This is the section header text color (currently green) */
+      color: #2ecc71;
       border-bottom: 2px solid #2ecc71;
       padding-bottom: 5px;
     }
-    p {
+    p, li {
       line-height: 1.6;
     }
+    details {
+      margin-top: 15px;
+    }
+    details summary {
+      font-weight: bold;
+      color: #2ecc71;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
     .project {
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-      gap: 20px;
-    }
-    .project img {
-      width: 200px;
-      height: auto;
-      border-radius: 8px;
-      object-fit: cover;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .project-text {
-      flex: 1;
+      margin-bottom: 20px;
     }
     footer {
       text-align: center;
@@ -79,72 +74,103 @@
       color: #777;
       font-size: 0.9em;
     }
-    @media (max-width: 600px) {
-      .project {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .project img {
-        width: 100%;
-      }
-    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Rachel Eimen</h1> <!--TODO: Website Header at top of page -->
-  <p>eimenrachel@gmail.com <!--TODO: Change to be your email (perferably personal email)  -->
-  <a class="linkedin-icon" href="https://www.linkedin.com/in/nancy-newlin/" target="_blank" rel="noopener noreferrer"><!--TODO: Change to be your linkedin -->
-  <i class="fab fa-linkedin"></i>
-  </a>
+  <h1>Rachel Eimen, Ph.D.</h1>
+  <p>
+    eimenrachel@gmail.com
+    <a class="social-icon" href="https://www.linkedin.com/in/rachel-eimen/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a class="social-icon" href="https://x.com/yourusername" target="_blank"><i class="fab fa-x-twitter"></i></a>
   </p>
 </header>
 
 <nav>
   <a href="#about">About Me</a>
   <a href="#projects">Projects</a>
+  <a href="#publications">Publications</a>
   <a href="#hobbies">Hobbies</a>
 </nav>
 
 <section id="about">
-  <h2>About Me</h2> <!--TODO: Write a few sentences about you! What year are you? What department? What is your focus area? Are you looking for a job/internship? -->
-  <p>Hello! I am a software engineer using computer vision and image processing for medical applications. I have a Ph.D. in Biomedical Engineering and a B.S. in Computer Engineering, and I enjoy using my skills to improve the lives of people and help to move technology forward.</p>
+  <h2>About Me</h2>
+  <p>I am a software engineer specializing in computer vision and image processing for medical applications. I hold a Ph.D. in Biomedical Engineering from Vanderbilt University and a B.S. in Computer Engineering from Clemson University. My expertise spans software development, algorithm design, and 3D reconstruction for clinical use. I have worked extensively on projects involving virtual simulation, frame reacquisition, and real-time image analysis, with applications in urology, gastroenterology, and neurosurgery. Currently, I serve as the lead software engineer at Yaya Scientific, LLC, developing tools for nerve detection in surgical settings.</p>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-
   <div class="project">
-    <img src="Image1.jpg" alt="Project 1">
-    <div class="project-text">
-      <h3>Project One</h3> <!--TODO: Project title -->
-      <p>This is a super cool project!!! I did xyz and learned xyz </p><!--TODO: Project description -->
-    </div>
+    <h3>3D Virtual Bladder Reconstruction</h3>
+    <p>Dissertation research developing software to improve virtual 3D reconstruction of the bladder from clinical white light cystoscopy videos and to facilitate technical development of clinical tools.</p>
+    <ul>
+      <li><strong>Fiberscope Data Reconstruction:</strong> Developed a novel algorithm to produce accurate 3D bladder reconstructions from flexible cystoscopy videos captured with a fiberscope.</li>
+      <li><strong>Frame Reacquisition:</strong> Created a real-time pipeline to detect low-quality frames that inhibit reconstruction and provide immediate clinician feedback for recollection.</li>
+      <li><strong>Virtual Cystoscopy Simulator:</strong> Built a realistic, customizable simulator in Blender to mimic clinical imaging conditions (motion blur, debris) for development and testing of reconstruction technology.</li>
+    </ul>
   </div>
-
   <div class="project">
-    <img src="Image1.jpg" alt="Project 2">
-    <div class="project-text">
-      <h3>Project One</h3> <!--TODO: Project title -->
-      <p>This is a super cool project!!! I did xyz and learned xyz </p><!--TODO: Project description -->
-    </div>
+    <h3>Virtual Endoscopy Simulator</h3>
+    <p>Collaborated on creating a virtual endoscopy simulator to assess the effect of varying imaging conditions on 3D reconstructions, enabling controlled evaluation of algorithm robustness.</p>
   </div>
-  
   <div class="project">
-    <img src="Image1.jpg" alt="Project 3">
-    <div class="project-text">
-      <h3>Project One</h3> <!--TODO: Project title -->
-      <p>This is a super cool project!!! I did xyz and learned xyz </p><!--TODO: Project description -->
-    </div>
+    <h3>Specular Reflection Removal</h3>
+    <p>Mentored undergraduate development of an algorithm to remove specular reflections from endoscopy videos by replacing affected regions with organ views from other frames.</p>
   </div>
+  <div class="project">
+    <h3>fNIRS Alignment and Optimization</h3>
+    <p>Collaborated on ensuring accurate alignment and optimizing real-time code for wearable fNIRS neuroimaging systems to improve measurement accuracy.</p>
+  </div>
+</section>
 
+<section id="publications">
+  <h2>Publications, Software & Presentations</h2>
+
+  <details>
+    <summary>Show Full Publications</summary>
+    <ul>
+      <li>R. Eimen, K. R. Scarpato, and A. K. Bowden, "Virtual simulator for cystoscopy containing motion blur and bladder debris to aid the development of clinical tools," <em>Biomed Opt Express</em>, 15(11), 6228 (2024).</li>
+      <li>R. Eimen, M. Pillai, K. R. Scarpato, and A. K. Bowden, "Towards improved 3D reconstruction of cystoscopies through real-time feedback for frame reacquisition," <em>Biomedical Optics Express</em>, 15(5), 3394–3411 (2024).</li>
+      <li>R. L. Eimen, H. Krzyzanowska, K. R. Scarpato, and A. K. Bowden, "Fiberscopic pattern removal for optimal coverage in 3D bladder reconstructions of fiberscope cystoscopy videos," <em>Journal of Medical Imaging</em>, 11(3), 34002 (2024).</li>
+      <li>H. Yin, R. Eimen, D. Moyer, and A. K. Bowden, "SpecReFlow: an algorithm for specular reflection restoration using flow-guided video completion," <em>Journal of Medical Imaging</em>, 11(02) (2024).</li>
+      <li>Y. Zhou, R. Eimen, E. J. Seibel, and A. K. Bowden, "Cost-Efficient Video Synthesis and Evaluation for Development of Virtual 3D Endoscopy," <em>IEEE J Transl Eng Health Med</em> (2021).</li>
+      <li>A. Kumar, R. Eimen, et al., "ARENA: An Augmented-Reality app for Neuroimager Alignment on the prefrontal cortex," <em>J Neurosci Methods</em> (in preparation).</li>
+      <li>S. Crawford, D. Liu, R. Eimen, and A. K. Bowden, “Fowler’s and semi-Fowler’s patient postures affect functional near-infrared spectroscopy (fNIRS) data during auditory stimulus” (in preparation).</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Show Software Releases</summary>
+    <ul>
+      <li><a href="https://osf.io/sjrdc/" target="_blank">EVS3D-Cysto</a></li>
+      <li><a href="https://osf.io/exf6r/" target="_blank">realTimeMetrics</a></li>
+      <li><a href="https://osf.io/gc9nr/" target="_blank">fiberscopicEnhancement</a></li>
+      <li><a href="https://osf.io/brmg9/" target="_blank">SpecReFlow</a></li>
+      <li><a href="https://github.com/BBOL-team/bladderslam_EVS3D" target="_blank">EVS-3D</a></li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Show Presentations</summary>
+    <ul>
+      <li>"Towards improved 3D reconstruction of cystoscopies through real-time feedback for frame reacquisition," Vanderbilt Institute for Surgery and Engineering Presentation Bootcamp (2024).</li>
+      <li>"An improved virtual simulator for clinical cystoscopy," Gordon Research Conference / Gordon Research Seminar (2024).</li>
+      <li>"SpecFlow: an end-to-end framework for specular reflection restoration in endoscopy videos," SPIE Photonics West (2023).</li>
+      <li>"A real-time classifier to predict the contribution of cystoscopy frames to 3D reconstructions," SPIE Photonics West (2023).</li>
+      <li>"Software tools to enable 3D bladder reconstruction from clinical white light cystoscopy videos," 3-Minute Thesis Competition, Vanderbilt University (2023).</li>
+      <li>"Removing a fiberscope-induced pattern from flexible cystoscopy frames to enable 3D bladder reconstructions," Engineering & Urology Society Annual Meeting (2022).</li>
+      <li>"A metric to predict the utility of cystoscopy frames in 3D bladder reconstructions," Engineering & Urology Society Annual Meeting (2022).</li>
+      <li>"Point-of-Care Clinician Guidance to Improve 3D Bladder Reconstructions," VISE Symposium (2021).</li>
+      <li>"Real-Time Clinician Guidance to Improve 3D Bladder Reconstructions," VISE Research in Progress Seminar (2021).</li>
+      <li>"Constructing Neural Circuits: An Integrated Optical Tweezer Microelectrode Array System," NCUR (2019) & Clemson Creative Inquiry Showcase (2019).</li>
+    </ul>
+  </details>
 </section>
 
 <section id="hobbies">
   <h2>Hobbies</h2>
-  <p>Outside of work, you can find me:</p> <!--TODO: Hobbies (will appear as a bulletted list-->
   <ul>
     <li>Exploring hiking trails and enjoying nature</li>
     <li>Experimenting with digital art and animation</li>
@@ -153,7 +179,7 @@
 </section>
 
 <footer>
-  &copy; 2025 First Name Last Name. All Rights Reserved. <!--TODO: Change to your name -->
+  &copy; 2025 Rachel Eimen. All Rights Reserved.
 </footer>
 
 </body>
