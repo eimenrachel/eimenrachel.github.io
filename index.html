@@ -55,6 +55,19 @@
     p, li {
       line-height: 1.6;
     }
+    .project {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    .project img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
     details {
       margin-top: 15px;
     }
@@ -64,15 +77,20 @@
       cursor: pointer;
       margin-bottom: 10px;
     }
-    .project {
-      margin-bottom: 20px;
-    }
     footer {
       text-align: center;
       padding: 15px;
       margin-top: 30px;
       color: #777;
       font-size: 0.9em;
+    }
+    @media (max-width: 600px) {
+      .project {
+        flex-direction: column;
+      }
+      .project img {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -102,26 +120,42 @@
 
 <section id="projects">
   <h2>Projects</h2>
+
   <div class="project">
-    <h3>3D Virtual Bladder Reconstruction</h3>
-    <p>Dissertation research developing software to improve virtual 3D reconstruction of the bladder from clinical white light cystoscopy videos and to facilitate technical development of clinical tools.</p>
-    <ul>
-      <li><strong>Fiberscope Data Reconstruction:</strong> Developed a novel algorithm to produce accurate 3D bladder reconstructions from flexible cystoscopy videos captured with a fiberscope.</li>
-      <li><strong>Frame Reacquisition:</strong> Created a real-time pipeline to detect low-quality frames that inhibit reconstruction and provide immediate clinician feedback for recollection.</li>
-      <li><strong>Virtual Cystoscopy Simulator:</strong> Built a realistic, customizable simulator in Blender to mimic clinical imaging conditions (motion blur, debris) for development and testing of reconstruction technology.</li>
-    </ul>
+    <img src="Image1.jpg" alt="3D Virtual Bladder Reconstruction">
+    <div>
+      <h3>3D Virtual Bladder Reconstruction</h3>
+      <p>Dissertation research developing software to improve virtual 3D reconstruction of the bladder from clinical white light cystoscopy videos and to facilitate technical development of clinical tools.</p>
+      <ul>
+        <li><strong>Fiberscope Data Reconstruction:</strong> Developed a novel algorithm to produce accurate 3D bladder reconstructions from flexible cystoscopy videos captured with a fiberscope.</li>
+        <li><strong>Frame Reacquisition:</strong> Created a real-time pipeline to detect low-quality frames that inhibit reconstruction and provide immediate clinician feedback for recollection.</li>
+        <li><strong>Virtual Cystoscopy Simulator:</strong> Built a realistic, customizable simulator in Blender to mimic clinical imaging conditions (motion blur, debris) for development and testing of reconstruction technology.</li>
+      </ul>
+    </div>
   </div>
+
   <div class="project">
-    <h3>Virtual Endoscopy Simulator</h3>
-    <p>Collaborated on creating a virtual endoscopy simulator to assess the effect of varying imaging conditions on 3D reconstructions, enabling controlled evaluation of algorithm robustness.</p>
+    <img src="Image2.jpg" alt="Virtual Endoscopy Simulator">
+    <div>
+      <h3>Virtual Endoscopy Simulator</h3>
+      <p>Collaborated on creating a virtual endoscopy simulator to assess the effect of varying imaging conditions on 3D reconstructions, enabling controlled evaluation of algorithm robustness.</p>
+    </div>
   </div>
+
   <div class="project">
-    <h3>Specular Reflection Removal</h3>
-    <p>Mentored undergraduate development of an algorithm to remove specular reflections from endoscopy videos by replacing affected regions with organ views from other frames.</p>
+    <img src="Image3.jpg" alt="Specular Reflection Removal">
+    <div>
+      <h3>Specular Reflection Removal</h3>
+      <p>Mentored undergraduate development of an algorithm to remove specular reflections from endoscopy videos by replacing affected regions with organ views from other frames.</p>
+    </div>
   </div>
+
   <div class="project">
-    <h3>fNIRS Alignment and Optimization</h3>
-    <p>Collaborated on ensuring accurate alignment and optimizing real-time code for wearable fNIRS neuroimaging systems to improve measurement accuracy.</p>
+    <img src="Image4.jpg" alt="fNIRS Alignment and Optimization">
+    <div>
+      <h3>fNIRS Alignment and Optimization</h3>
+      <p>Collaborated on ensuring accurate alignment and optimizing real-time code for wearable fNIRS neuroimaging systems to improve measurement accuracy.</p>
+    </div>
   </div>
 </section>
 
@@ -131,56 +165,4 @@
   <details>
     <summary>Show Full Publications</summary>
     <ul>
-      <li>R. Eimen, K. R. Scarpato, and A. K. Bowden, "Virtual simulator for cystoscopy containing motion blur and bladder debris to aid the development of clinical tools," <em>Biomed Opt Express</em>, 15(11), 6228 (2024).</li>
-      <li>R. Eimen, M. Pillai, K. R. Scarpato, and A. K. Bowden, "Towards improved 3D reconstruction of cystoscopies through real-time feedback for frame reacquisition," <em>Biomedical Optics Express</em>, 15(5), 3394–3411 (2024).</li>
-      <li>R. L. Eimen, H. Krzyzanowska, K. R. Scarpato, and A. K. Bowden, "Fiberscopic pattern removal for optimal coverage in 3D bladder reconstructions of fiberscope cystoscopy videos," <em>Journal of Medical Imaging</em>, 11(3), 34002 (2024).</li>
-      <li>H. Yin, R. Eimen, D. Moyer, and A. K. Bowden, "SpecReFlow: an algorithm for specular reflection restoration using flow-guided video completion," <em>Journal of Medical Imaging</em>, 11(02) (2024).</li>
-      <li>Y. Zhou, R. Eimen, E. J. Seibel, and A. K. Bowden, "Cost-Efficient Video Synthesis and Evaluation for Development of Virtual 3D Endoscopy," <em>IEEE J Transl Eng Health Med</em> (2021).</li>
-      <li>A. Kumar, R. Eimen, et al., "ARENA: An Augmented-Reality app for Neuroimager Alignment on the prefrontal cortex," <em>J Neurosci Methods</em> (in preparation).</li>
-      <li>S. Crawford, D. Liu, R. Eimen, and A. K. Bowden, “Fowler’s and semi-Fowler’s patient postures affect functional near-infrared spectroscopy (fNIRS) data during auditory stimulus” (in preparation).</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Show Software Releases</summary>
-    <ul>
-      <li><a href="https://osf.io/sjrdc/" target="_blank">EVS3D-Cysto</a></li>
-      <li><a href="https://osf.io/exf6r/" target="_blank">realTimeMetrics</a></li>
-      <li><a href="https://osf.io/gc9nr/" target="_blank">fiberscopicEnhancement</a></li>
-      <li><a href="https://osf.io/brmg9/" target="_blank">SpecReFlow</a></li>
-      <li><a href="https://github.com/BBOL-team/bladderslam_EVS3D" target="_blank">EVS-3D</a></li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Show Presentations</summary>
-    <ul>
-      <li>"Towards improved 3D reconstruction of cystoscopies through real-time feedback for frame reacquisition," Vanderbilt Institute for Surgery and Engineering Presentation Bootcamp (2024).</li>
-      <li>"An improved virtual simulator for clinical cystoscopy," Gordon Research Conference / Gordon Research Seminar (2024).</li>
-      <li>"SpecFlow: an end-to-end framework for specular reflection restoration in endoscopy videos," SPIE Photonics West (2023).</li>
-      <li>"A real-time classifier to predict the contribution of cystoscopy frames to 3D reconstructions," SPIE Photonics West (2023).</li>
-      <li>"Software tools to enable 3D bladder reconstruction from clinical white light cystoscopy videos," 3-Minute Thesis Competition, Vanderbilt University (2023).</li>
-      <li>"Removing a fiberscope-induced pattern from flexible cystoscopy frames to enable 3D bladder reconstructions," Engineering & Urology Society Annual Meeting (2022).</li>
-      <li>"A metric to predict the utility of cystoscopy frames in 3D bladder reconstructions," Engineering & Urology Society Annual Meeting (2022).</li>
-      <li>"Point-of-Care Clinician Guidance to Improve 3D Bladder Reconstructions," VISE Symposium (2021).</li>
-      <li>"Real-Time Clinician Guidance to Improve 3D Bladder Reconstructions," VISE Research in Progress Seminar (2021).</li>
-      <li>"Constructing Neural Circuits: An Integrated Optical Tweezer Microelectrode Array System," NCUR (2019) & Clemson Creative Inquiry Showcase (2019).</li>
-    </ul>
-  </details>
-</section>
-
-<section id="hobbies">
-  <h2>Hobbies</h2>
-  <ul>
-    <li>Exploring hiking trails and enjoying nature</li>
-    <li>Experimenting with digital art and animation</li>
-    <li>Playing board games and trivia nights with friends</li>
-  </ul>
-</section>
-
-<footer>
-  &copy; 2025 Rachel Eimen. All Rights Reserved.
-</footer>
-
-</body>
-</html>
+      <li>R. Eimen, K. R. Scarpato, and A. K. Bowden, "Virtual simulator for cystoscopy containing motion blur and bladder debris to aid the develo
