@@ -138,22 +138,6 @@
       }
     }
     
-    /* Numbered lists */
-    ol {
-      list-style: none; /* Remove default numbering */
-      counter-reset: my-list-counter; /* Initialize a custom counter */
-    }
-  
-    ol > li {
-      counter-increment: my-list-counter; /* Increment the counter for each list item */
-    }
-  
-    ol > li::before {
-      content: "[" counter(my-list-counter) "] "; /* Add brackets and the counter value */
-      font-weight: bold; /* Optional: Make the number bold */
-      margin-right: 0.5em; /* Optional: Add some spacing after the number */
-    }
-    
   </style>
 </head>
 
