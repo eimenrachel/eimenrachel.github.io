@@ -17,7 +17,50 @@
       background-color: #4a6741;
       color: white;
       padding: 20px;
-      text-align: center;
+      /*text-align: center;*/
+    }
+        
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .hero-headshot {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #d1f0e0;
+      flex-shrink: 0;
+    }
+    
+    .header-text {
+      flex: 1;
+    }
+    
+    .header-text h1 {
+      margin: 0;
+    }
+    
+    .header-tagline {
+      margin: 6px 0 10px;
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+    
+    /* mobile: stack image above text */
+    @media (max-width: 600px) {
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .header-text {
+        text-align: center;
+      }
     }
     .social-icon {
       color: white;
