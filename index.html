@@ -137,6 +137,23 @@
         width: 100%;
       }
     }
+    
+    /* Numbered lists */
+    ol {
+      list-style: none; /* Remove default numbering */
+      counter-reset: my-list-counter; /* Initialize a custom counter */
+    }
+  
+    ol > li {
+      counter-increment: my-list-counter; /* Increment the counter for each list item */
+    }
+  
+    ol > li::before {
+      content: "[" counter(my-list-counter) "] "; /* Add brackets and the counter value */
+      font-weight: bold; /* Optional: Make the number bold */
+      margin-right: 0.5em; /* Optional: Add some spacing after the number */
+    }
+    
   </style>
 </head>
 
@@ -239,13 +256,13 @@
 
   <details>
     <summary>Show Full Publications</summary>
-    <ul>
+    <ol="1">
       <li>R. Eimen, K. R. Scarpato, and A. K. Bowden, "Virtual simulator for cystoscopy containing motion blur and bladder debris to aid the development of clinical tools," <em>Biomed Opt Express</em>, 15(11), 6228 (2024). <a href="https://doi.org/10.1364/BOE.522800" target="_blank">DOI</a> | <a href="https://osf.io/sjrdc/" target="_blank">Code</a></li>
       <li>R. Eimen, M. Pillai, K. R. Scarpato, and A. K. Bowden, "Towards improved 3D reconstruction of cystoscopies through real-time feedback for frame reacquisition," <em>Biomedical Optics Express</em>, 15(5), 3394–3411 (2024). <a href="https://doi.org/10.1364/BOE.516201" target="_blank">DOI</a> | <a href="https://osf.io/exf6r/" target="_blank">Code</a></li>
       <li>R. L. Eimen, H. Krzyzanowska, K. R. Scarpato, and A. K. Bowden, "Fiberscopic pattern removal for optimal coverage in 3D bladder reconstructions of fiberscope cystoscopy videos," <em>Journal of Medical Imaging</em>, 11(3), 034002 (2024). <a href="https://doi.org/10.1117/1.JMI.11.3.034002" target="_blank">DOI</a> | <a href="https://osf.io/gc9nr/" target="_blank">Code</a></li>
       <li>H. Yin, R. Eimen, D. Moyer, and A. K. Bowden, "SpecReFlow: an algorithm for specular reflection restoration using flow-guided video completion," <em>Journal of Medical Imaging</em>, 11(02), (2024). <a href="https://doi.org/10.1117/1.JMI.11.2.024002" target="_blank">DOI</a> | <a href="https://osf.io/brmg9/" target="_blank">Code</a></li>
       <li>Y. Zhou, R. Eimen, E. J. Seibel, and A. K. Bowden, "Cost-Efficient Video Synthesis and Evaluation for Development of Virtual 3D Endoscopy," <em>IEEE J Transl Eng Health Med</em>, 9, (2021). <a href="https://doi.org/10.1109/JTEHM.2021.3067921" target="_blank">DOI</a> | <a href="https://github.com/BBOL-team/bladderslam_EVS3D" target="_blank">Code</a></li>
-    </ul>
+    </ol>
   </details>
 
   <details>
